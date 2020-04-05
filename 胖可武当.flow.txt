@@ -1,0 +1,64 @@
+// raid.flow
+// 帮派频道：即刻起开始进攻武当
+// 四区白三三，司空青竹改
+stopstate
+@await 500
+$stoppfm
+//切钩子-六脉-凌波
+enable sword wudugoufa;enable unarmed liumaishenjian;enable dodge lingboweibu2
+@await 500
+//切君子剑-香囊-邀月手
+eq r57n56c4483;eq rdde291a6de;eq h8o62ed5900
+@await 3000
+@renew
+[while] (:room) != 武当派-后山小院
+    $to 武当派-后山小院
+    @await 2000
+pty 准备下武器，大佬们帮忙清下号令
+($id_1) = {r武当派长老}?
+($id_2) = {r武当派长老}?# obj.id == "(id_1)" #
+($id_bang) = {r张三丰}?
+($id_fight) = (id_2)
+liaoshang
+@tip 疗伤完毕|目前气血充沛
+[while] true
+    ($succes) = null
+    @cd sword.suo,unarmed.qi,dodge.lingbo
+    @print 开始比试
+    fight (id_fight)
+    @perform dodge.lingbo,unarmed.qi,sword.suo
+    @tip 当啷一声($succes)地上|手中并($succes)兵器|早有准备|你向后退了几步|这场比试算我输了|承让|脸色微变|向后跃开三尺|果然高明|你现在正忙
+    [while] (:room) == 武当派-后山小院
+        go south
+        @await 500
+    @until (:combating) == false
+    @print 已比试
+    go north
+    [if] (succes) != null
+        [if] (id_fight) == (id_2)
+            ($id_fight) = (id_1)
+            @print 3号下武器成功，准备下一个
+            pty 3号下武器成功，准备下一个
+        [else if] (id_fight) == (id_1)
+            ($id_fight) = (id_bang)
+            @print 2号下武器成功，准备下一个
+            pty 2号下武器成功，准备下一个
+        [else if] (id_fight) == (id_bang)
+            [break]
+    [else]
+        @print 下武器失败，准备重试
+        pty 下武器失败，准备重试
+        $to 扬州城-武庙
+    @liaoshang
+    $to 武当派-后山小院
+pty 武器已下，准备开战
+//切神照-玄虚步-玄铁
+enable unarmed shenzhaojing;enable dodge xuanxubu;enable sword xuantiejianfa
+@await 500
+//切逍遥手-龙骨舍利
+eq ofw73143eec;eq wwts4f6c176
+$to 扬州城-武庙
+@liaoshang
+$to 武当派-后山小院
+kill (id_bang);kill (id_bang)
+pty 冲鸭
