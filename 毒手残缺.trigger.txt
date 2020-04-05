@@ -1,0 +1,5 @@
+//移除Buff-hama-自己
+[if] (:combating)
+    [if] ($Mpz) == 1
+        @perform parry.wan
+        @perform sword.zhong
