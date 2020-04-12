@@ -1,0 +1,10 @@
+//新聊天信息：帮派
+[if] (content) == 残缺三丰
+    pty 收到，即将残缺三丰
+    @on 自动残缺
+[if] (content) == 开毒
+    pty 收到，即将开毒手
+    @on 自动毒手
+[if] (content) == 关毒
+    pty 收到，即将关毒手
+    @off 自动毒手
