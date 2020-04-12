@@ -1,5 +1,9 @@
 //帮派频道：获得了最终胜利|全部成员撤退
 ($Mpz) = 0
-@off 毒手残缺
-@await 5000
+@off 自动毒手
+@off 自动残缺
+@off 专心听话
+@off 武当翻车
+setting no_message 1;setting off_plist 1
+@await 10000
 $zdwk
