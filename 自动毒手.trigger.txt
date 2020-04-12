@@ -1,0 +1,4 @@
+//Buff移除 hama 自己
+[if] (:combating)
+    [if] (Mpz) == 1
+        @perform parry.wan
