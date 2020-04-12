@@ -1,0 +1,4 @@
+//技能释放: force.xi
+//~silent
+$wait 20000
+$waitpfm dodge.gui
