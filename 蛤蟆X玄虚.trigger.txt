@@ -1,9 +1,0 @@
-//新增buff，自己
-[if] (sid) == dodge
-    @await 12000
-    [if] (:combating)
-        @perform force.xi
-[if] (sid) == hama
-    @await 18000
-    [if] (:combating)
-        @perform dodge.gui
