@@ -7,8 +7,8 @@ $stoppfm
 //切钩子-六脉-凌波
 enable sword wudugoufa;enable unarmed liumaishenjian;enable dodge lingboweibu2
 @await 500
-//切君子剑-香囊-邀月手
-eq r57n56c4483;eq rdde291a6de;eq h8o62ed5900
+//切香囊-邀月手-君子剑
+eq rdde291a6de;eq h8o62ed5900;eq r57n56c4483
 @await 3000
 @renew
 [while] (:room) != 武当派-后山小院
@@ -27,7 +27,7 @@ liaoshang
     @print 开始比试
     fight (id_fight)
     @perform dodge.lingbo,unarmed.qi,sword.suo
-    @tip 当啷一声($succes)地上|手中并($succes)兵器|早有准备|你向后退了几步|这场比试算我输了|承让|脸色微变|向后跃开三尺|果然高明|你现在正忙
+    @tip 当啷一声($succes)地上|手中并($succes)兵器|早有准备|你向后退了几步|这场比试算我输了|承让|脸色微变|向后跃开三尺|果然高明|你现在正忙|知道我的厉害
     [while] (:room) == 武当派-后山小院
         go south
         @await 500
@@ -60,5 +60,8 @@ eq ofw73143eec;eq wwts4f6c176
 $to 扬州城-武庙
 @liaoshang
 $to 武当派-后山小院
-kill (id_bang);kill (id_bang)
+setting no_message 1;setting off_plist 1
+kill (id_1)
 pty 冲鸭
+@on 武当翻车
+@on 专心听话
