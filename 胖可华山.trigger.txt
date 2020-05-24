@@ -1,0 +1,24 @@
+// 测试版
+// raid.flow
+// 帮派频道：即刻起开始进攻华山
+// 四区白三三，司空青竹改
+stopstate
+@await 500
+$stoppfm
+@renew
+[while] (:room) != 华山派-客厅
+    $to 华山派-客厅
+    @await 2000
+pty 准备开华山
+
+($id_1) = {r华山派长老}?
+($id_2) = {r华山派长老}?# obj.id == "(id_1)" #
+($id_bang) = {r岳不群}?
+
+setting no_message 1;setting off_plist 1
+kill (id_1)
+pty 冲鸭
+@on 华山翻车
+@on 专心听话
+@on 自动毒手
+@on 保岳不群
