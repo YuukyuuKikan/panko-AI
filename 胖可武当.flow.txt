@@ -52,11 +52,11 @@ liaoshang
     @liaoshang
     $to 武当派-后山小院
 pty 武器已下，准备开战
-//切神照-玄虚步-玄铁
-enable unarmed shenzhaojing;enable dodge xuanxubu;enable sword xuantiejianfa
+//切神照-玄虚步-玄铁-蛤蟆
+enable unarmed shenzhaojing;enable dodge xuanxubu;enable sword xuantiejianfa;enable force hamagong
 @await 500
-//切逍遥手-龙骨舍利
-eq ofw73143eec;eq wwts4f6c176
+//切逍遥手-龙骨舍利-自制
+eq ofw73143eec;eq wwts4f6c176;eq 2ozm44046f3
 $to 扬州城-武庙
 @liaoshang
 $to 武当派-后山小院
