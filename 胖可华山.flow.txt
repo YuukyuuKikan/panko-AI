@@ -11,6 +11,12 @@ $stoppfm
     @await 2000
 pty 准备开华山
 
+//切神照-玄虚步-玄铁-蛤蟆
+enable unarmed shenzhaojing;enable dodge xuanxubu;enable sword xuantiejianfa;enable force hamagong
+@await 500
+//切逍遥手-龙骨舍利-自制
+eq ofw73143eec;eq wwts4f6c176;eq 2ozm44046f3
+
 ($id_1) = {r华山派长老}?
 ($id_2) = {r华山派长老}?# obj.id == "(id_1)" #
 ($id_bang) = {r岳不群}?
